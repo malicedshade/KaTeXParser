@@ -1,0 +1,674 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 55;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		00059ACC2CCF450F004DD358 /* KTXPSquareRoot.h in Headers */ = {isa = PBXBuildFile; fileRef = 00059ACA2CCF450F004DD358 /* KTXPSquareRoot.h */; };
+		00059ACD2CCF450F004DD358 /* KTXPSquareRoot.m in Sources */ = {isa = PBXBuildFile; fileRef = 00059ACB2CCF450F004DD358 /* KTXPSquareRoot.m */; };
+		0019A7802D3A06680085ED7A /* KTXP_RLapNode.h in Headers */ = {isa = PBXBuildFile; fileRef = 0019A77E2D3A06680085ED7A /* KTXP_RLapNode.h */; };
+		0019A7812D3A06680085ED7A /* KTXP_RLapNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 0019A77F2D3A06680085ED7A /* KTXP_RLapNode.m */; };
+		0026EC7F2CB4C208000D22FB /* KTXPGroupNode.h in Headers */ = {isa = PBXBuildFile; fileRef = 0026EC7D2CB4C208000D22FB /* KTXPGroupNode.h */; };
+		0026EC802CB4C208000D22FB /* KTXPGroupNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 0026EC7E2CB4C208000D22FB /* KTXPGroupNode.m */; };
+		00315D722CB4F9FB00E62389 /* KTXPRootNode.h in Headers */ = {isa = PBXBuildFile; fileRef = 00315D702CB4F9FB00E62389 /* KTXPRootNode.h */; };
+		00315D732CB4F9FB00E62389 /* KTXPRootNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 00315D712CB4F9FB00E62389 /* KTXPRootNode.m */; };
+		004453972C09B82300CDB945 /* KTXPSymbols.m in Sources */ = {isa = PBXBuildFile; fileRef = 004453962C09B82300CDB945 /* KTXPSymbols.m */; };
+		005AE1E62CCF4C7C00DCB3E0 /* KTXPOpenNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 005AE1E52CCF4C7C00DCB3E0 /* KTXPOpenNode.m */; };
+		005AE1E72CCF4C7C00DCB3E0 /* KTXPOpenNode.h in Headers */ = {isa = PBXBuildFile; fileRef = 005AE1E42CCF4C7C00DCB3E0 /* KTXPOpenNode.h */; };
+		005AE1EA2CCF4CA300DCB3E0 /* KTXPCloseNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 005AE1E92CCF4CA300DCB3E0 /* KTXPCloseNode.m */; };
+		005AE1EB2CCF4CA300DCB3E0 /* KTXPCloseNode.h in Headers */ = {isa = PBXBuildFile; fileRef = 005AE1E82CCF4CA300DCB3E0 /* KTXPCloseNode.h */; };
+		005C2E032C18347800F2FC2D /* KTXPAtomNode.h in Headers */ = {isa = PBXBuildFile; fileRef = 005C2E012C18347800F2FC2D /* KTXPAtomNode.h */; };
+		005C2E042C18347800F2FC2D /* KTXPAtomNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 005C2E022C18347800F2FC2D /* KTXPAtomNode.m */; };
+		005C2E0C2C1836CB00F2FC2D /* KTXPEnvironmentNode.h in Headers */ = {isa = PBXBuildFile; fileRef = 005C2E0A2C1836CB00F2FC2D /* KTXPEnvironmentNode.h */; };
+		005C2E0D2C1836CB00F2FC2D /* KTXPEnvironmentNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 005C2E0B2C1836CB00F2FC2D /* KTXPEnvironmentNode.m */; };
+		0069478B2CC5B3320083134B /* KTXPSupSubNode.h in Headers */ = {isa = PBXBuildFile; fileRef = 006947892CC5B3320083134B /* KTXPSupSubNode.h */; };
+		0069478C2CC5B3320083134B /* KTXPSupSubNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 0069478A2CC5B3320083134B /* KTXPSupSubNode.m */; };
+		007CA1CA2CBBB33800E29987 /* KTXPWhitespaceNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 007CA1C92CBBB33800E29987 /* KTXPWhitespaceNode.m */; };
+		007CA1CB2CBBB33800E29987 /* KTXPWhitespaceNode.h in Headers */ = {isa = PBXBuildFile; fileRef = 007CA1C82CBBB33800E29987 /* KTXPWhitespaceNode.h */; };
+		007D32352D3B13B1002BE3F3 /* KTXPOverbraceNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 007D32342D3B13B1002BE3F3 /* KTXPOverbraceNode.m */; };
+		007D32362D3B13B1002BE3F3 /* KTXPOverbraceNode.h in Headers */ = {isa = PBXBuildFile; fileRef = 007D32332D3B13B1002BE3F3 /* KTXPOverbraceNode.h */; };
+		007D32392D3B15C5002BE3F3 /* KTXP_LLapNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 007D32382D3B15C5002BE3F3 /* KTXP_LLapNode.m */; };
+		007D323A2D3B15C5002BE3F3 /* KTXP_LLapNode.h in Headers */ = {isa = PBXBuildFile; fileRef = 007D32372D3B15C5002BE3F3 /* KTXP_LLapNode.h */; };
+		008A2BFB2D7EA1C600C10955 /* KTXPMacroGroupNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 008A2BFA2D7EA1C600C10955 /* KTXPMacroGroupNode.m */; };
+		008A2BFC2D7EA1C600C10955 /* KTXPMacroGroupNode.h in Headers */ = {isa = PBXBuildFile; fileRef = 008A2BF92D7EA1C600C10955 /* KTXPMacroGroupNode.h */; };
+		0090EE072D5087F70083DA12 /* KTXPKernNode.h in Headers */ = {isa = PBXBuildFile; fileRef = 0090EE052D5087F70083DA12 /* KTXPKernNode.h */; };
+		0090EE082D5087F70083DA12 /* KTXPKernNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 0090EE062D5087F70083DA12 /* KTXPKernNode.m */; };
+		00A3B0042C98D6EB00B6E71C /* KTXPToken.h in Headers */ = {isa = PBXBuildFile; fileRef = 00A3B0002C98D6EB00B6E71C /* KTXPToken.h */; };
+		00A3B0052C98D6EB00B6E71C /* KTXPLexer.h in Headers */ = {isa = PBXBuildFile; fileRef = 00A3B0012C98D6EB00B6E71C /* KTXPLexer.h */; };
+		00A3B0062C98D6EB00B6E71C /* KTXPLexer.m in Sources */ = {isa = PBXBuildFile; fileRef = 00A3B0022C98D6EB00B6E71C /* KTXPLexer.m */; };
+		00A3B0072C98D6EB00B6E71C /* KTXPToken.m in Sources */ = {isa = PBXBuildFile; fileRef = 00A3B0032C98D6EB00B6E71C /* KTXPToken.m */; };
+		00A485322C2639080040D642 /* KTXPStack.h in Headers */ = {isa = PBXBuildFile; fileRef = 00A485302C2639080040D642 /* KTXPStack.h */; };
+		00A485332C2639080040D642 /* KTXPStack.m in Sources */ = {isa = PBXBuildFile; fileRef = 00A485312C2639080040D642 /* KTXPStack.m */; };
+		00AF27E32D7501AE0015D7F7 /* KTXPVerbatimNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 00AF27E22D7501AE0015D7F7 /* KTXPVerbatimNode.m */; };
+		00AF27E42D7501AE0015D7F7 /* KTXPVerbatimNode.h in Headers */ = {isa = PBXBuildFile; fileRef = 00AF27E12D7501AE0015D7F7 /* KTXPVerbatimNode.h */; };
+		00AF27E72D750AF30015D7F7 /* KTXPLimitsNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 00AF27E62D750AF30015D7F7 /* KTXPLimitsNode.m */; };
+		00AF27E82D750AF30015D7F7 /* KTXPLimitsNode.h in Headers */ = {isa = PBXBuildFile; fileRef = 00AF27E52D750AF30015D7F7 /* KTXPLimitsNode.h */; };
+		00B4FA1E2C096C6D00DF3B33 /* KTXPParser.h in Headers */ = {isa = PBXBuildFile; fileRef = 00B4FA1C2C096C6D00DF3B33 /* KTXPParser.h */; };
+		00B4FA1F2C096C6D00DF3B33 /* KTXPParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 00B4FA1D2C096C6D00DF3B33 /* KTXPParser.m */; };
+		00B4FA222C096D2A00DF3B33 /* KTXPTreeNode.h in Headers */ = {isa = PBXBuildFile; fileRef = 00B4FA202C096D2900DF3B33 /* KTXPTreeNode.h */; };
+		00B4FA232C096D2A00DF3B33 /* KTXPTreeNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 00B4FA212C096D2A00DF3B33 /* KTXPTreeNode.m */; };
+		00CF0EED2CC591E900F6720E /* KTXPLengthNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 00CF0EEC2CC591E900F6720E /* KTXPLengthNode.m */; };
+		00CF0EEE2CC591E900F6720E /* KTXPLengthNode.h in Headers */ = {isa = PBXBuildFile; fileRef = 00CF0EEB2CC591E900F6720E /* KTXPLengthNode.h */; };
+		00CF0EF12CC5ABA700F6720E /* KTXPPrePostNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 00CF0EF02CC5ABA700F6720E /* KTXPPrePostNode.m */; };
+		00CF0EF22CC5ABA700F6720E /* KTXPPrePostNode.h in Headers */ = {isa = PBXBuildFile; fileRef = 00CF0EEF2CC5ABA700F6720E /* KTXPPrePostNode.h */; };
+		00CF93802C165E7900550D54 /* Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00CF937F2C165E7900550D54 /* Tests.m */; };
+		00CF93812C165E7900550D54 /* libKaTeXParser.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 00FA86E42A3CD71C006F182A /* libKaTeXParser.a */; settings = {ATTRIBUTES = (Required, ); }; };
+		00CF93882C1666A300550D54 /* KTXPErrorDomain.h in Headers */ = {isa = PBXBuildFile; fileRef = 00CF93872C1663CA00550D54 /* KTXPErrorDomain.h */; };
+		00CF93892C1666E700550D54 /* KTXPSymbols.h in Headers */ = {isa = PBXBuildFile; fileRef = 00B4FA242C09AE1300DF3B33 /* KTXPSymbols.h */; };
+		00D0B8DD2D3B06E50026FC3B /* KTXPUnderbraceNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 00D0B8DC2D3B06E50026FC3B /* KTXPUnderbraceNode.m */; };
+		00D0B8DE2D3B06E50026FC3B /* KTXPUnderbraceNode.h in Headers */ = {isa = PBXBuildFile; fileRef = 00D0B8DB2D3B06E50026FC3B /* KTXPUnderbraceNode.h */; };
+		00D5EAA52CBBA2F0003E22CE /* KTXPFunctionNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 00D5EAA42CBBA2F0003E22CE /* KTXPFunctionNode.m */; };
+		00D5EAA62CBBA2F0003E22CE /* KTXPFunctionNode.h in Headers */ = {isa = PBXBuildFile; fileRef = 00D5EAA32CBBA2F0003E22CE /* KTXPFunctionNode.h */; };
+		00D6903C2C294E0E0037A12E /* KTXPFunctions.h in Headers */ = {isa = PBXBuildFile; fileRef = 00D6903A2C294E0E0037A12E /* KTXPFunctions.h */; };
+		00D6903D2C294E0E0037A12E /* KTXPFunctions.m in Sources */ = {isa = PBXBuildFile; fileRef = 00D6903B2C294E0E0037A12E /* KTXPFunctions.m */; };
+		63C3B40C2E644EC900624EF5 /* KTXPParameterNode.h in Headers */ = {isa = PBXBuildFile; fileRef = 63C3B40A2E644EC900624EF5 /* KTXPParameterNode.h */; };
+		63C3B40D2E644EC900624EF5 /* KTXPParameterNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 63C3B40B2E644EC900624EF5 /* KTXPParameterNode.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		00CF93822C165E7900550D54 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 00FA86DC2A3CD71C006F182A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 00FA86E32A3CD71C006F182A;
+			remoteInfo = KaTeXParser;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		00032B4C2C2F5F6C00551383 /* NOTES.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = NOTES.md; sourceTree = "<group>"; };
+		00059ACA2CCF450F004DD358 /* KTXPSquareRoot.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KTXPSquareRoot.h; sourceTree = "<group>"; };
+		00059ACB2CCF450F004DD358 /* KTXPSquareRoot.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KTXPSquareRoot.m; sourceTree = "<group>"; };
+		0019A77E2D3A06680085ED7A /* KTXP_RLapNode.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KTXP_RLapNode.h; sourceTree = "<group>"; };
+		0019A77F2D3A06680085ED7A /* KTXP_RLapNode.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KTXP_RLapNode.m; sourceTree = "<group>"; };
+		002608A42C310D5D00203251 /* KTXPEnvironments.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KTXPEnvironments.h; sourceTree = "<group>"; };
+		0026EC7D2CB4C208000D22FB /* KTXPGroupNode.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KTXPGroupNode.h; sourceTree = "<group>"; };
+		0026EC7E2CB4C208000D22FB /* KTXPGroupNode.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KTXPGroupNode.m; sourceTree = "<group>"; };
+		00315D702CB4F9FB00E62389 /* KTXPRootNode.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KTXPRootNode.h; sourceTree = "<group>"; };
+		00315D712CB4F9FB00E62389 /* KTXPRootNode.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KTXPRootNode.m; sourceTree = "<group>"; };
+		004453962C09B82300CDB945 /* KTXPSymbols.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KTXPSymbols.m; sourceTree = "<group>"; };
+		005AE1E42CCF4C7C00DCB3E0 /* KTXPOpenNode.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KTXPOpenNode.h; sourceTree = "<group>"; };
+		005AE1E52CCF4C7C00DCB3E0 /* KTXPOpenNode.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KTXPOpenNode.m; sourceTree = "<group>"; };
+		005AE1E82CCF4CA300DCB3E0 /* KTXPCloseNode.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KTXPCloseNode.h; sourceTree = "<group>"; };
+		005AE1E92CCF4CA300DCB3E0 /* KTXPCloseNode.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KTXPCloseNode.m; sourceTree = "<group>"; };
+		005C2E012C18347800F2FC2D /* KTXPAtomNode.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KTXPAtomNode.h; sourceTree = "<group>"; };
+		005C2E022C18347800F2FC2D /* KTXPAtomNode.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KTXPAtomNode.m; sourceTree = "<group>"; };
+		005C2E0A2C1836CB00F2FC2D /* KTXPEnvironmentNode.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KTXPEnvironmentNode.h; sourceTree = "<group>"; };
+		005C2E0B2C1836CB00F2FC2D /* KTXPEnvironmentNode.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KTXPEnvironmentNode.m; sourceTree = "<group>"; };
+		006947892CC5B3320083134B /* KTXPSupSubNode.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KTXPSupSubNode.h; sourceTree = "<group>"; };
+		0069478A2CC5B3320083134B /* KTXPSupSubNode.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KTXPSupSubNode.m; sourceTree = "<group>"; };
+		007CA1C82CBBB33800E29987 /* KTXPWhitespaceNode.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KTXPWhitespaceNode.h; sourceTree = "<group>"; };
+		007CA1C92CBBB33800E29987 /* KTXPWhitespaceNode.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KTXPWhitespaceNode.m; sourceTree = "<group>"; };
+		007D32332D3B13B1002BE3F3 /* KTXPOverbraceNode.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KTXPOverbraceNode.h; sourceTree = "<group>"; };
+		007D32342D3B13B1002BE3F3 /* KTXPOverbraceNode.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KTXPOverbraceNode.m; sourceTree = "<group>"; };
+		007D32372D3B15C5002BE3F3 /* KTXP_LLapNode.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KTXP_LLapNode.h; sourceTree = "<group>"; };
+		007D32382D3B15C5002BE3F3 /* KTXP_LLapNode.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KTXP_LLapNode.m; sourceTree = "<group>"; };
+		008A2BF92D7EA1C600C10955 /* KTXPMacroGroupNode.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KTXPMacroGroupNode.h; sourceTree = "<group>"; };
+		008A2BFA2D7EA1C600C10955 /* KTXPMacroGroupNode.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KTXPMacroGroupNode.m; sourceTree = "<group>"; };
+		0090EE052D5087F70083DA12 /* KTXPKernNode.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KTXPKernNode.h; sourceTree = "<group>"; };
+		0090EE062D5087F70083DA12 /* KTXPKernNode.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KTXPKernNode.m; sourceTree = "<group>"; };
+		00A3B0002C98D6EB00B6E71C /* KTXPToken.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KTXPToken.h; sourceTree = "<group>"; };
+		00A3B0012C98D6EB00B6E71C /* KTXPLexer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KTXPLexer.h; sourceTree = "<group>"; };
+		00A3B0022C98D6EB00B6E71C /* KTXPLexer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KTXPLexer.m; sourceTree = "<group>"; };
+		00A3B0032C98D6EB00B6E71C /* KTXPToken.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KTXPToken.m; sourceTree = "<group>"; };
+		00A485302C2639080040D642 /* KTXPStack.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KTXPStack.h; sourceTree = "<group>"; };
+		00A485312C2639080040D642 /* KTXPStack.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KTXPStack.m; sourceTree = "<group>"; };
+		00A4EBDE2C070005007A0486 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		00AF27E12D7501AE0015D7F7 /* KTXPVerbatimNode.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KTXPVerbatimNode.h; sourceTree = "<group>"; };
+		00AF27E22D7501AE0015D7F7 /* KTXPVerbatimNode.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KTXPVerbatimNode.m; sourceTree = "<group>"; };
+		00AF27E52D750AF30015D7F7 /* KTXPLimitsNode.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KTXPLimitsNode.h; sourceTree = "<group>"; };
+		00AF27E62D750AF30015D7F7 /* KTXPLimitsNode.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KTXPLimitsNode.m; sourceTree = "<group>"; };
+		00B4FA1C2C096C6D00DF3B33 /* KTXPParser.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KTXPParser.h; sourceTree = "<group>"; };
+		00B4FA1D2C096C6D00DF3B33 /* KTXPParser.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KTXPParser.m; sourceTree = "<group>"; };
+		00B4FA202C096D2900DF3B33 /* KTXPTreeNode.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KTXPTreeNode.h; sourceTree = "<group>"; };
+		00B4FA212C096D2A00DF3B33 /* KTXPTreeNode.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KTXPTreeNode.m; sourceTree = "<group>"; };
+		00B4FA242C09AE1300DF3B33 /* KTXPSymbols.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KTXPSymbols.h; sourceTree = "<group>"; };
+		00CF0EEB2CC591E900F6720E /* KTXPLengthNode.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KTXPLengthNode.h; sourceTree = "<group>"; };
+		00CF0EEC2CC591E900F6720E /* KTXPLengthNode.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KTXPLengthNode.m; sourceTree = "<group>"; };
+		00CF0EEF2CC5ABA700F6720E /* KTXPPrePostNode.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KTXPPrePostNode.h; sourceTree = "<group>"; };
+		00CF0EF02CC5ABA700F6720E /* KTXPPrePostNode.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KTXPPrePostNode.m; sourceTree = "<group>"; };
+		00CF937D2C165E7900550D54 /* Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		00CF937F2C165E7900550D54 /* Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Tests.m; sourceTree = "<group>"; };
+		00CF93872C1663CA00550D54 /* KTXPErrorDomain.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KTXPErrorDomain.h; sourceTree = "<group>"; };
+		00D0B8DB2D3B06E50026FC3B /* KTXPUnderbraceNode.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KTXPUnderbraceNode.h; sourceTree = "<group>"; };
+		00D0B8DC2D3B06E50026FC3B /* KTXPUnderbraceNode.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KTXPUnderbraceNode.m; sourceTree = "<group>"; };
+		00D5EAA32CBBA2F0003E22CE /* KTXPFunctionNode.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KTXPFunctionNode.h; sourceTree = "<group>"; };
+		00D5EAA42CBBA2F0003E22CE /* KTXPFunctionNode.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KTXPFunctionNode.m; sourceTree = "<group>"; };
+		00D690392C28DCB20037A12E /* KTXPSettingsKeys.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KTXPSettingsKeys.h; sourceTree = "<group>"; };
+		00D6903A2C294E0E0037A12E /* KTXPFunctions.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KTXPFunctions.h; sourceTree = "<group>"; };
+		00D6903B2C294E0E0037A12E /* KTXPFunctions.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KTXPFunctions.m; sourceTree = "<group>"; };
+		00FA86E42A3CD71C006F182A /* libKaTeXParser.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libKaTeXParser.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		63C3B40A2E644EC900624EF5 /* KTXPParameterNode.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KTXPParameterNode.h; sourceTree = "<group>"; };
+		63C3B40B2E644EC900624EF5 /* KTXPParameterNode.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KTXPParameterNode.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		00CF937A2C165E7900550D54 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				00CF93812C165E7900550D54 /* libKaTeXParser.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		00FA86E22A3CD71C006F182A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		005C2E052C18348400F2FC2D /* Nodes */ = {
+			isa = PBXGroup;
+			children = (
+				00B4FA202C096D2900DF3B33 /* KTXPTreeNode.h */,
+				00B4FA212C096D2A00DF3B33 /* KTXPTreeNode.m */,
+				005C2E012C18347800F2FC2D /* KTXPAtomNode.h */,
+				005C2E022C18347800F2FC2D /* KTXPAtomNode.m */,
+				005C2E0A2C1836CB00F2FC2D /* KTXPEnvironmentNode.h */,
+				005C2E0B2C1836CB00F2FC2D /* KTXPEnvironmentNode.m */,
+				0026EC7D2CB4C208000D22FB /* KTXPGroupNode.h */,
+				0026EC7E2CB4C208000D22FB /* KTXPGroupNode.m */,
+				00315D702CB4F9FB00E62389 /* KTXPRootNode.h */,
+				00315D712CB4F9FB00E62389 /* KTXPRootNode.m */,
+				00D5EAA32CBBA2F0003E22CE /* KTXPFunctionNode.h */,
+				00D5EAA42CBBA2F0003E22CE /* KTXPFunctionNode.m */,
+				007CA1C82CBBB33800E29987 /* KTXPWhitespaceNode.h */,
+				007CA1C92CBBB33800E29987 /* KTXPWhitespaceNode.m */,
+				00CF0EEB2CC591E900F6720E /* KTXPLengthNode.h */,
+				00CF0EEC2CC591E900F6720E /* KTXPLengthNode.m */,
+				00CF0EEF2CC5ABA700F6720E /* KTXPPrePostNode.h */,
+				00CF0EF02CC5ABA700F6720E /* KTXPPrePostNode.m */,
+				006947892CC5B3320083134B /* KTXPSupSubNode.h */,
+				0069478A2CC5B3320083134B /* KTXPSupSubNode.m */,
+				00059ACA2CCF450F004DD358 /* KTXPSquareRoot.h */,
+				00059ACB2CCF450F004DD358 /* KTXPSquareRoot.m */,
+				005AE1E42CCF4C7C00DCB3E0 /* KTXPOpenNode.h */,
+				005AE1E52CCF4C7C00DCB3E0 /* KTXPOpenNode.m */,
+				005AE1E82CCF4CA300DCB3E0 /* KTXPCloseNode.h */,
+				005AE1E92CCF4CA300DCB3E0 /* KTXPCloseNode.m */,
+				0019A77E2D3A06680085ED7A /* KTXP_RLapNode.h */,
+				0019A77F2D3A06680085ED7A /* KTXP_RLapNode.m */,
+				007D32372D3B15C5002BE3F3 /* KTXP_LLapNode.h */,
+				007D32382D3B15C5002BE3F3 /* KTXP_LLapNode.m */,
+				00D0B8DB2D3B06E50026FC3B /* KTXPUnderbraceNode.h */,
+				00D0B8DC2D3B06E50026FC3B /* KTXPUnderbraceNode.m */,
+				007D32332D3B13B1002BE3F3 /* KTXPOverbraceNode.h */,
+				007D32342D3B13B1002BE3F3 /* KTXPOverbraceNode.m */,
+				0090EE052D5087F70083DA12 /* KTXPKernNode.h */,
+				0090EE062D5087F70083DA12 /* KTXPKernNode.m */,
+				00AF27E12D7501AE0015D7F7 /* KTXPVerbatimNode.h */,
+				00AF27E22D7501AE0015D7F7 /* KTXPVerbatimNode.m */,
+				00AF27E52D750AF30015D7F7 /* KTXPLimitsNode.h */,
+				00AF27E62D750AF30015D7F7 /* KTXPLimitsNode.m */,
+				008A2BF92D7EA1C600C10955 /* KTXPMacroGroupNode.h */,
+				008A2BFA2D7EA1C600C10955 /* KTXPMacroGroupNode.m */,
+				63C3B40A2E644EC900624EF5 /* KTXPParameterNode.h */,
+				63C3B40B2E644EC900624EF5 /* KTXPParameterNode.m */,
+			);
+			path = Nodes;
+			sourceTree = "<group>";
+		};
+		00A3B0082C98D6F200B6E71C /* Lexing */ = {
+			isa = PBXGroup;
+			children = (
+				00A3B0012C98D6EB00B6E71C /* KTXPLexer.h */,
+				00A3B0022C98D6EB00B6E71C /* KTXPLexer.m */,
+				00A3B0002C98D6EB00B6E71C /* KTXPToken.h */,
+				00A3B0032C98D6EB00B6E71C /* KTXPToken.m */,
+			);
+			path = Lexing;
+			sourceTree = "<group>";
+		};
+		00A4EBE82C0702AB007A0486 /* Parsing */ = {
+			isa = PBXGroup;
+			children = (
+				005C2E052C18348400F2FC2D /* Nodes */,
+				00B4FA1C2C096C6D00DF3B33 /* KTXPParser.h */,
+				00B4FA1D2C096C6D00DF3B33 /* KTXPParser.m */,
+				00D6903A2C294E0E0037A12E /* KTXPFunctions.h */,
+				00D6903B2C294E0E0037A12E /* KTXPFunctions.m */,
+				002608A42C310D5D00203251 /* KTXPEnvironments.h */,
+				00B4FA242C09AE1300DF3B33 /* KTXPSymbols.h */,
+				004453962C09B82300CDB945 /* KTXPSymbols.m */,
+				00A485302C2639080040D642 /* KTXPStack.h */,
+				00A485312C2639080040D642 /* KTXPStack.m */,
+			);
+			path = Parsing;
+			sourceTree = "<group>";
+		};
+		00CF937E2C165E7900550D54 /* Tests */ = {
+			isa = PBXGroup;
+			children = (
+				00CF937F2C165E7900550D54 /* Tests.m */,
+			);
+			path = Tests;
+			sourceTree = "<group>";
+		};
+		00FA86DB2A3CD71C006F182A = {
+			isa = PBXGroup;
+			children = (
+				00A4EBDE2C070005007A0486 /* README.md */,
+				00032B4C2C2F5F6C00551383 /* NOTES.md */,
+				00FA86E62A3CD71C006F182A /* KaTeXParser */,
+				00CF937E2C165E7900550D54 /* Tests */,
+				00FA86E52A3CD71C006F182A /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		00FA86E52A3CD71C006F182A /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				00FA86E42A3CD71C006F182A /* libKaTeXParser.a */,
+				00CF937D2C165E7900550D54 /* Tests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		00FA86E62A3CD71C006F182A /* KaTeXParser */ = {
+			isa = PBXGroup;
+			children = (
+				00A3B0082C98D6F200B6E71C /* Lexing */,
+				00A4EBE82C0702AB007A0486 /* Parsing */,
+				00CF93872C1663CA00550D54 /* KTXPErrorDomain.h */,
+				00D690392C28DCB20037A12E /* KTXPSettingsKeys.h */,
+			);
+			path = KaTeXParser;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		00FA86E02A3CD71C006F182A /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0069478B2CC5B3320083134B /* KTXPSupSubNode.h in Headers */,
+				00A3B0052C98D6EB00B6E71C /* KTXPLexer.h in Headers */,
+				00CF0EF22CC5ABA700F6720E /* KTXPPrePostNode.h in Headers */,
+				005AE1EB2CCF4CA300DCB3E0 /* KTXPCloseNode.h in Headers */,
+				00A485322C2639080040D642 /* KTXPStack.h in Headers */,
+				007CA1CB2CBBB33800E29987 /* KTXPWhitespaceNode.h in Headers */,
+				0019A7802D3A06680085ED7A /* KTXP_RLapNode.h in Headers */,
+				007D323A2D3B15C5002BE3F3 /* KTXP_LLapNode.h in Headers */,
+				005C2E032C18347800F2FC2D /* KTXPAtomNode.h in Headers */,
+				00059ACC2CCF450F004DD358 /* KTXPSquareRoot.h in Headers */,
+				00A3B0042C98D6EB00B6E71C /* KTXPToken.h in Headers */,
+				005C2E0C2C1836CB00F2FC2D /* KTXPEnvironmentNode.h in Headers */,
+				00315D722CB4F9FB00E62389 /* KTXPRootNode.h in Headers */,
+				00D5EAA62CBBA2F0003E22CE /* KTXPFunctionNode.h in Headers */,
+				00D6903C2C294E0E0037A12E /* KTXPFunctions.h in Headers */,
+				00CF93882C1666A300550D54 /* KTXPErrorDomain.h in Headers */,
+				00D0B8DE2D3B06E50026FC3B /* KTXPUnderbraceNode.h in Headers */,
+				00B4FA1E2C096C6D00DF3B33 /* KTXPParser.h in Headers */,
+				0026EC7F2CB4C208000D22FB /* KTXPGroupNode.h in Headers */,
+				00B4FA222C096D2A00DF3B33 /* KTXPTreeNode.h in Headers */,
+				00CF0EEE2CC591E900F6720E /* KTXPLengthNode.h in Headers */,
+				00CF93892C1666E700550D54 /* KTXPSymbols.h in Headers */,
+				008A2BFC2D7EA1C600C10955 /* KTXPMacroGroupNode.h in Headers */,
+				00AF27E82D750AF30015D7F7 /* KTXPLimitsNode.h in Headers */,
+				005AE1E72CCF4C7C00DCB3E0 /* KTXPOpenNode.h in Headers */,
+				00AF27E42D7501AE0015D7F7 /* KTXPVerbatimNode.h in Headers */,
+				63C3B40C2E644EC900624EF5 /* KTXPParameterNode.h in Headers */,
+				0090EE072D5087F70083DA12 /* KTXPKernNode.h in Headers */,
+				007D32362D3B13B1002BE3F3 /* KTXPOverbraceNode.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		00CF937C2C165E7900550D54 /* Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 00CF93842C165E7900550D54 /* Build configuration list for PBXNativeTarget "Tests" */;
+			buildPhases = (
+				00CF93792C165E7900550D54 /* Sources */,
+				00CF937A2C165E7900550D54 /* Frameworks */,
+				00CF937B2C165E7900550D54 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				00CF93832C165E7900550D54 /* PBXTargetDependency */,
+			);
+			name = Tests;
+			productName = Tests;
+			productReference = 00CF937D2C165E7900550D54 /* Tests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		00FA86E32A3CD71C006F182A /* KaTeXParser */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 00FA86ED2A3CD71C006F182A /* Build configuration list for PBXNativeTarget "KaTeXParser" */;
+			buildPhases = (
+				00FA86E02A3CD71C006F182A /* Headers */,
+				00FA86E12A3CD71C006F182A /* Sources */,
+				00FA86E22A3CD71C006F182A /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = KaTeXParser;
+			productName = KaTeXParser;
+			productReference = 00FA86E42A3CD71C006F182A /* libKaTeXParser.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		00FA86DC2A3CD71C006F182A /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				CLASSPREFIX = KTXP;
+				LastUpgradeCheck = 1600;
+				TargetAttributes = {
+					00CF937C2C165E7900550D54 = {
+						CreatedOnToolsVersion = 15.0;
+					};
+					00FA86E32A3CD71C006F182A = {
+						CreatedOnToolsVersion = 13.2.1;
+					};
+				};
+			};
+			buildConfigurationList = 00FA86DF2A3CD71C006F182A /* Build configuration list for PBXProject "KaTeXParser" */;
+			compatibilityVersion = "Xcode 13.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 00FA86DB2A3CD71C006F182A;
+			productRefGroup = 00FA86E52A3CD71C006F182A /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				00FA86E32A3CD71C006F182A /* KaTeXParser */,
+				00CF937C2C165E7900550D54 /* Tests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		00CF937B2C165E7900550D54 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		00CF93792C165E7900550D54 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				00CF93802C165E7900550D54 /* Tests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		00FA86E12A3CD71C006F182A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				00D5EAA52CBBA2F0003E22CE /* KTXPFunctionNode.m in Sources */,
+				005C2E042C18347800F2FC2D /* KTXPAtomNode.m in Sources */,
+				00CF0EED2CC591E900F6720E /* KTXPLengthNode.m in Sources */,
+				00B4FA1F2C096C6D00DF3B33 /* KTXPParser.m in Sources */,
+				008A2BFB2D7EA1C600C10955 /* KTXPMacroGroupNode.m in Sources */,
+				00D6903D2C294E0E0037A12E /* KTXPFunctions.m in Sources */,
+				005AE1EA2CCF4CA300DCB3E0 /* KTXPCloseNode.m in Sources */,
+				00059ACD2CCF450F004DD358 /* KTXPSquareRoot.m in Sources */,
+				00AF27E32D7501AE0015D7F7 /* KTXPVerbatimNode.m in Sources */,
+				005AE1E62CCF4C7C00DCB3E0 /* KTXPOpenNode.m in Sources */,
+				005C2E0D2C1836CB00F2FC2D /* KTXPEnvironmentNode.m in Sources */,
+				00A485332C2639080040D642 /* KTXPStack.m in Sources */,
+				63C3B40D2E644EC900624EF5 /* KTXPParameterNode.m in Sources */,
+				007CA1CA2CBBB33800E29987 /* KTXPWhitespaceNode.m in Sources */,
+				00D0B8DD2D3B06E50026FC3B /* KTXPUnderbraceNode.m in Sources */,
+				0090EE082D5087F70083DA12 /* KTXPKernNode.m in Sources */,
+				00A3B0072C98D6EB00B6E71C /* KTXPToken.m in Sources */,
+				0026EC802CB4C208000D22FB /* KTXPGroupNode.m in Sources */,
+				0069478C2CC5B3320083134B /* KTXPSupSubNode.m in Sources */,
+				00CF0EF12CC5ABA700F6720E /* KTXPPrePostNode.m in Sources */,
+				00315D732CB4F9FB00E62389 /* KTXPRootNode.m in Sources */,
+				00A3B0062C98D6EB00B6E71C /* KTXPLexer.m in Sources */,
+				007D32352D3B13B1002BE3F3 /* KTXPOverbraceNode.m in Sources */,
+				0019A7812D3A06680085ED7A /* KTXP_RLapNode.m in Sources */,
+				00AF27E72D750AF30015D7F7 /* KTXPLimitsNode.m in Sources */,
+				00B4FA232C096D2A00DF3B33 /* KTXPTreeNode.m in Sources */,
+				004453972C09B82300CDB945 /* KTXPSymbols.m in Sources */,
+				007D32392D3B15C5002BE3F3 /* KTXP_LLapNode.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		00CF93832C165E7900550D54 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 00FA86E32A3CD71C006F182A /* KaTeXParser */;
+			targetProxy = 00CF93822C165E7900550D54 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		00CF93852C165E7900550D54 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GENERATE_INFOPLIST_FILE = YES;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = ali.Tests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+			};
+			name = Debug;
+		};
+		00CF93862C165E7900550D54 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GENERATE_INFOPLIST_FILE = YES;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = ali.Tests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+			};
+			name = Release;
+		};
+		00FA86EB2A3CD71C006F182A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEAD_CODE_STRIPPING = YES;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				FRAMEWORK_SEARCH_PATHS = "";
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 11.7;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		00FA86EC2A3CD71C006F182A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEAD_CODE_STRIPPING = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				FRAMEWORK_SEARCH_PATHS = "";
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 11.7;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		00FA86EE2A3CD71C006F182A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEAD_CODE_STRIPPING = YES;
+				EXECUTABLE_PREFIX = lib;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		00FA86EF2A3CD71C006F182A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEAD_CODE_STRIPPING = YES;
+				EXECUTABLE_PREFIX = lib;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		00CF93842C165E7900550D54 /* Build configuration list for PBXNativeTarget "Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				00CF93852C165E7900550D54 /* Debug */,
+				00CF93862C165E7900550D54 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		00FA86DF2A3CD71C006F182A /* Build configuration list for PBXProject "KaTeXParser" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				00FA86EB2A3CD71C006F182A /* Debug */,
+				00FA86EC2A3CD71C006F182A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		00FA86ED2A3CD71C006F182A /* Build configuration list for PBXNativeTarget "KaTeXParser" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				00FA86EE2A3CD71C006F182A /* Debug */,
+				00FA86EF2A3CD71C006F182A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 00FA86DC2A3CD71C006F182A /* Project object */;
+}
