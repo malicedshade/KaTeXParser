@@ -13,11 +13,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 @property (strong, readonly) KTXPToken *token;
 
-- (instancetype) initWithToken:(KTXPToken *) token NS_DESIGNATED_INITIALIZER;
-+ (instancetype) createWithToken:(KTXPToken *) token;
-+ (instancetype) createWithString:(NSString *)str
-                       atLocation:(NSUInteger)location
-                             type:(KTXPTokenType)type;
+- (instancetype)initWithToken:(KTXPToken *)token NS_DESIGNATED_INITIALIZER;
++ (instancetype)createWithToken:(KTXPToken *)token;
 
 @end
 

@@ -16,52 +16,45 @@
 
 @implementation KTXPFunctionNode
 
-- (instancetype) init
+- (instancetype)init
 {
 	return [self initWithToken:[KTXPToken emptyToken] arguments:@[]];
 }
 
-- (instancetype) initWithToken:(KTXPToken *)tok arguments:(NSArray<__kindof KTXPTreeNode *> *)args
+- (instancetype)initWithToken:(KTXPToken *)tok arguments:(NSArray<__kindof KTXPTreeNode *> *)args
 {
 	self = [super init];
-
+	
 	if(self)
 	{
 		[self setFuncTok:tok];
 		[self setArgs:args];
 	}
-
+	
 	return self;
 }
 
-+ (instancetype) createWithToken:(KTXPToken *)tok arguments:(NSArray<__kindof KTXPTreeNode *> *)args
++ (instancetype)createWithToken:(KTXPToken *)tok arguments:(NSArray<__kindof KTXPTreeNode *> *)args
 {
 	return [[KTXPFunctionNode alloc] initWithToken:tok arguments:args];
 }
 
-- (NSUInteger) hash
+- (NSUInteger)hash
 {
 	NSUInteger h = [_funcTok hash];
 	h = 31 * h + [_args hash];
-
+	
 	return h;
-}
-
-+ (instancetype) createWithString:(NSString *)str atLocation:(NSUInteger)loc type:(KTXPTokenType)type arguments:(NSArray<__kindof KTXPTreeNode *> *)args
-{
-    KTXPToken *t = [KTXPToken createWithLexeme:str location:loc type:type];
-
-    return [self createWithToken:t arguments:args];
 }
 
 #pragma mark - NSCopying
 
-- (nonnull id) copyWithZone:(nullable NSZone *)zone
+- (nonnull id)copyWithZone:(nullable NSZone *)zone
 {
 	KTXPFunctionNode *fn = [[self class] allocWithZone:zone];
 	fn->_args = [_args copy];
 	fn->_funcTok = [_funcTok copy];
-
+	
 	return fn;
 }
 

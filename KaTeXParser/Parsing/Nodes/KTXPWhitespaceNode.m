@@ -15,52 +15,45 @@
 
 @implementation KTXPWhitespaceNode
 
-- (instancetype) init
+- (instancetype)init
 {
 	return [self initWithTokens:@[]];
 }
 
-- (instancetype) initWithTokens:(NSArray<__kindof KTXPToken *> *)toks
+- (instancetype)initWithTokens:(NSArray<__kindof KTXPToken *> *)toks
 {
 	self = [super init];
-
+	
 	if(self)
 	{
 		[self setSpaceTokens:toks];
 	}
-
+	
 	return self;
 }
 
-+ (instancetype) createWithTokens:(NSArray<__kindof KTXPToken *> *)toks
++ (instancetype)createWithTokens:(NSArray<__kindof KTXPToken *> *)toks
 {
 	return [[KTXPWhitespaceNode alloc] initWithTokens:toks];
 }
 
-+ (instancetype) createWithString:(NSString *)str atLocation:(NSUInteger)location
-{
-	KTXPToken *token = [KTXPToken createWithLexeme:str location:location type:KTXPTokenTypeWhitespace];
-	return [self createWithTokens:@[token]];
-}
-
-- (NSUInteger) hash
-{
+- (NSUInteger)hash {
 	NSUInteger h = 17;
-
+	
 	for(KTXPToken *tok in _spaceTokens) {
 		h = h + [tok hash];
 	}
-
+	
 	return h;
 }
 
 #pragma mark - NSCopying
 
-- (nonnull id) copyWithZone:(nullable NSZone *)zone
+- (nonnull id)copyWithZone:(nullable NSZone *)zone
 {
 	KTXPWhitespaceNode *wn = [[self class] allocWithZone:zone];
 	wn->_spaceTokens = [_spaceTokens copy];
-
+	
 	return wn;
 }
 
