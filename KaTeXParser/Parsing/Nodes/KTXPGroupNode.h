@@ -22,6 +22,9 @@ NS_ASSUME_NONNULL_BEGIN
 + (instancetype)createWithOpen:(KTXPToken * _Nullable)op
 					  elements:(NSArray *)elem
 						 close:(KTXPToken * _Nullable)cl;
++ (instancetype)createWithOpenLocation:(NSUInteger)openLocation
+						 closeLocation:(NSUInteger)closeLocation
+							 elements:(NSArray<__kindof KTXPTreeNode *> *)elements;
 
 @end
 

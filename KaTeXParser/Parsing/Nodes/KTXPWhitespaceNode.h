@@ -13,9 +13,10 @@ NS_ASSUME_NONNULL_BEGIN
 
 @property (strong, readonly) NSArray<__kindof KTXPToken *> *spaceTokens;
 
-- (instancetype)initWithTokens:(NSArray<__kindof KTXPToken *> *)toks NS_DESIGNATED_INITIALIZER;
-+ (instancetype)createWithTokens:(NSArray<__kindof KTXPToken *> *)toks;
- 
+- (instancetype) initWithTokens:(NSArray<__kindof KTXPToken *> *)toks NS_DESIGNATED_INITIALIZER;
++ (instancetype) createWithTokens:(NSArray<__kindof KTXPToken *> *)toks;
++ (instancetype) createWithString:(NSString *)str atLocation:(NSUInteger)location;
+
 @end
 
 NS_ASSUME_NONNULL_END

@@ -29,14 +29,14 @@
 					    close:(nullable KTXPToken *)cl
 {
 	self = [super init];
-	
+
 	if(self)
 	{
 		[self setOpen:op];
 		[self setElements:elem];
 		[self setClose:cl];
 	}
-	
+
 	return self;
 }
 
@@ -47,17 +47,30 @@
 	return [[KTXPGroupNode alloc] initWithOpen:op elements:elem close:cl];
 }
 
++ (instancetype)createWithOpenLocation:(NSUInteger)openLocation
+						 closeLocation:(NSUInteger)closeLocation
+							 elements:(NSArray<__kindof KTXPTreeNode *> *)elements
+{
+	KTXPToken *open = (openLocation == NSNotFound) ? nil : [KTXPToken createWithLexeme:@"{"
+	                                                                          location:openLocation
+																				  type:KTXPTokenTypeGroupOpen];
+	KTXPToken *close = (closeLocation == NSNotFound) ? nil : [KTXPToken createWithLexeme:@"}"
+		                                                                        location:closeLocation
+																			        type:KTXPTokenTypeGroupClose];
+	return [self createWithOpen:open elements:elements close:close];
+}
+
 - (BOOL) isEqual:(id)other
 {
 	if(other == self) return YES;
 	if(other == nil || ![super isEqual:other]) return NO;
-	
+
 	BOOL nilOp = (_open == [(KTXPGroupNode *)other open]);
 	BOOL   opE = [_open isEqual:[(KTXPGroupNode *)other open]];
 	BOOL   elE = [_elements isEqual:[(KTXPGroupNode *)other elements]];
 	BOOL nilCl = (_close == [(KTXPGroupNode *)other close]);
 	BOOL   clE = [_close isEqual:[(KTXPGroupNode *)other close]];
-	
+
 	return (nilOp || opE) && elE && (nilCl || clE);
 }
 
@@ -66,7 +79,7 @@
 	NSUInteger h = [_open hash];
 			   h = 31 * h + [_elements hash];
 			   h = 31 * h + [_close hash];
-	
+
 	return h;
 }
 
@@ -78,7 +91,7 @@
 	gn->_close = [_close copy];
 	gn->_elements = [_elements copy];
 	gn->_open = [_open copy];
-	
+
 	return gn;
 }
 

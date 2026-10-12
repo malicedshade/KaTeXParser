@@ -14,8 +14,9 @@ NS_ASSUME_NONNULL_BEGIN
 @property (strong, readonly) KTXPToken *funcTok;
 @property (strong, readonly) NSArray<__kindof KTXPTreeNode *> *args;
 
-- (instancetype)initWithToken:(KTXPToken *)tok arguments:(NSArray<__kindof KTXPTreeNode *> *)args NS_DESIGNATED_INITIALIZER;
-+ (instancetype)createWithToken:(KTXPToken *)tok arguments:(NSArray<__kindof KTXPTreeNode *> *)args;
+- (instancetype) initWithToken:(KTXPToken *)tok arguments:(NSArray<__kindof KTXPTreeNode *> *)args NS_DESIGNATED_INITIALIZER;
++ (instancetype) createWithToken:(KTXPToken *)tok arguments:(NSArray<__kindof KTXPTreeNode *> *)args;
++ (instancetype) createWithString:(NSString *)str atLocation:(NSUInteger)loc type:(KTXPTokenType)type arguments:(NSArray<__kindof KTXPTreeNode *> *)args;
 
 @end
 

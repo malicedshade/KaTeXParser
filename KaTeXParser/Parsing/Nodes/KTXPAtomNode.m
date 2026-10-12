@@ -15,26 +15,33 @@
 
 @implementation KTXPAtomNode
 
--(instancetype)init
+-(instancetype) init
 {
 	return [self initWithToken:[KTXPToken emptyToken]];
 }
 
-- (instancetype)initWithToken:(KTXPToken *)token
+- (instancetype) initWithToken:(KTXPToken *)token
 {
 	self = [super init];
-	
+
 	if(self)
 	{
 		[self setToken:token];
 	}
-	
+
 	return self;
 }
 
-+ (instancetype)createWithToken:(KTXPToken *)token
++ (instancetype) createWithToken:(KTXPToken *)token
 {
 	return [[self alloc] initWithToken:token];
+}
+
++ (instancetype) createWithString:(NSString *)str atLocation:(NSUInteger)location type:(KTXPTokenType)type
+{
+    KTXPToken *t = [KTXPToken createWithLexeme:str location:location type:type];
+
+    return [self createWithToken:t];
 }
 
 #pragma mark - NSObject
@@ -52,7 +59,7 @@
 
 #pragma mark - NSCopying
 
-- (nonnull id)copyWithZone:(nullable NSZone *)zone
+- (nonnull id) copyWithZone:(nullable NSZone *)zone
 {
 	KTXPAtomNode *an = [[self class] allocWithZone:zone];
 	an->_token = [_token copy];

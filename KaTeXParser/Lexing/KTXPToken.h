@@ -43,15 +43,15 @@ typedef NS_ENUM(NSUInteger, KTXPGroup) {
 @property (strong) NSString *lexeme;
 @property (readonly) KTXPTokenType type;
 
-+ (instancetype)createWithLexeme:(NSString *)lm
-						  location:(NSUInteger)loc
-							  type:(KTXPTokenType)type;
-- (instancetype)initWithLexeme:(NSString *)lm
-						location:(NSUInteger)loc
-							type:(KTXPTokenType)type NS_DESIGNATED_INITIALIZER;
-+ (instancetype)emptyToken;
-+ (NSString *)typeString:(KTXPTokenType)type;
-- (NSString *)typeDescription;
++ (instancetype) createWithLexeme:(NSString *)lm
+					 	 location:(NSUInteger)loc
+							 type:(KTXPTokenType)type;
+- (instancetype) initWithLexeme:(NSString *)lm
+					   location:(NSUInteger)loc
+						   type:(KTXPTokenType)type NS_DESIGNATED_INITIALIZER;
++ (instancetype) emptyToken;
++ (NSString *) typeString:(KTXPTokenType)type;
+- (NSString *) typeDescription;
 
 @end
 
