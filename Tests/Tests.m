@@ -118,7 +118,7 @@
 	XCTAssertTrue(correct);
 }
 
-#pragma mark - Parser
+#pragma mark - Basic Parse
 
 - (void) testEmptyParse
 {
@@ -582,6 +582,10 @@
 	XCTAssert(errLoc == 3);
 }
 
+#pragma mark - Measurement Tests
+// TODO: Add measurements tests after adding support in the parser.
+
+#pragma mark - Stress Tests
 // The following tests are from Mozilla's MathML Torture Test.
 
 - (void) testStress1
@@ -1081,9 +1085,18 @@
 
 	KTXPRootNode *r = [_parser parse:nil];
 	KTXPRootNode *c = [KTXPRootNode createWithChildren:@[
-	[KTXPMacroGroupNode createWithLeft:[KTXPFunctionNode createWithString:@"\\left" atLocation:0 type:KTXPTokenTypeSpecialFunction arguments:@[[KTXPToken createWithLexeme:@"(" location:5 type:KTXPTokenTypeAtom]]] elements:@[
+	[KTXPMacroGroupNode createWithLeft:[KTXPFunctionNode createWithString:@"\\left"
+															   atLocation:0
+																	 type:KTXPTokenTypeSpecialFunction
+																arguments:@[[KTXPAtomNode createWithString:@"("
+																								atLocation:5
+																									  type:KTXPTokenTypeAtom]]]
+							  elements:@[
 		[KTXPAtomNode createWithString:@" " atLocation:6 type:KTXPTokenTypeAtom],
-		[KTXPFunctionNode createWithString:@"\\frac" atLocation:7 type:KTXPTokenTypeFunction arguments:@[
+		[KTXPFunctionNode createWithString:@"\\frac"
+								atLocation:7
+									  type:KTXPTokenTypeFunction
+								 arguments:@[
 			[KTXPGroupNode createWithOpenLocation:12 closeLocation:23 elements:@[
 				[KTXPAtomNode createWithString:@"\\partial" atLocation:13 type:KTXPTokenTypeAtom],
 				[KTXPSupSubNode createWithSup:[KTXPGroupNode createWithOpenLocation:NSNotFound closeLocation:NSNotFound elements:@[
@@ -1093,9 +1106,11 @@
 			[KTXPGroupNode createWithOpenLocation:24 closeLocation:37 elements:@[
 				[KTXPAtomNode createWithString:@"\\partial " atLocation:25 type:KTXPTokenTypeAtom],
 				[KTXPAtomNode createWithString:@"x" atLocation:34 type:KTXPTokenTypeAtom],
-				[KTXPSupSubNode createWithSup:[KTXPGroupNode createWithOpenLocation:NSNotFound closeLocation:NSNotFound elements:@[
+				[KTXPSupSubNode createWithSup:[KTXPGroupNode createWithOpenLocation:NSNotFound
+																	  closeLocation:NSNotFound
+																		   elements:@[
 						[KTXPAtomNode createWithString:@"2" atLocation:36 type:KTXPTokenTypeAtom]
-					]] Sub:nil]
+									   ]] Sub:nil]
 			]]
 		]],
 		[KTXPAtomNode createWithString:@" " atLocation:38 type:KTXPTokenTypeAtom],
@@ -1117,7 +1132,12 @@
 			]]
 		]],
 		[KTXPAtomNode createWithString:@" " atLocation:72 type:KTXPTokenTypeAtom]
-	] right:[KTXPFunctionNode createWithString:@"\\right" atLocation:73 type:KTXPTokenTypeSpecialFunction arguments:@[[KTXPToken createWithLexeme:@")" location:79 type:KTXPTokenTypeAtom]]]],
+	] right:[KTXPFunctionNode createWithString:@"\\right"
+									atLocation:73
+										  type:KTXPTokenTypeSpecialFunction
+									 arguments:@[[KTXPAtomNode createWithString:@")"
+																	 atLocation:79
+																		   type:KTXPTokenTypeAtom]]]],
 	[KTXPAtomNode createWithString:@" " atLocation:80 type:KTXPTokenTypeAtom],
 	[KTXPAtomNode createWithString:@"|" atLocation:81 type:KTXPTokenTypeAtom],
 	[KTXPAtomNode createWithString:@"\\varphi" atLocation:82 type:KTXPTokenTypeAtom],

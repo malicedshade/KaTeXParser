@@ -16,20 +16,20 @@
 
 @implementation KTXPEnvironmentOpen
 
-- (instancetype)init
+- (instancetype) init
 {
 	return [self initWithBoundary:[KTXPToken emptyToken] env:@""];
 }
 
-- (instancetype)initWithBoundary:(KTXPToken *)tok
-							 env:(KTXPEnvironment)env
+- (instancetype) initWithBoundary:(KTXPToken *)tok
+							  env:(KTXPEnvironment)env
 {
 	return [self initWithBoundary:tok env:env args:@[]];
 }
 
-- (instancetype)initWithBoundary:(KTXPToken *)tok
-							 env:(KTXPEnvironment)env
-							args:(NSArray<NSString *> *)args
+- (instancetype) initWithBoundary:(KTXPToken *)tok
+							  env:(KTXPEnvironment)env
+							 args:(NSArray<NSString *> *)args
 {
 	self = [super initWithBoundary:tok env:env];
 	
@@ -43,31 +43,39 @@
 	return self;
 }
 
-+ (instancetype)createWithBoundary:(KTXPToken *)tok 
-							   env:(KTXPEnvironment)env
++ (instancetype) createWithBoundary:(KTXPToken *)tok
+							    env:(KTXPEnvironment)env
 {
 	return [[KTXPEnvironmentOpen alloc] initWithBoundary:tok env:env args:@[]];
 }
 
-+ (instancetype)createWithBoundary:(KTXPToken *)tok 
-							   env:(KTXPEnvironment)env
-							  args:(NSArray<NSString *> *)args
++ (instancetype) createWithBoundary:(KTXPToken *)tok
+				 			    env:(KTXPEnvironment)env
+							   args:(NSArray<NSString *> *)args
 {
 	return [[KTXPEnvironmentOpen alloc] initWithBoundary:tok env:env args:args];
 }
 
 - (NSUInteger)hash { return [[super tok] hash] + [[super env] hash] + [_args hash]; }
 
+- (nonnull id) copyWithZone:(nullable NSZone *)zone
+{
+	KTXPEnvironmentOpen *op = [super copyWithZone:zone];
+	op->_args = [_args copy];
+	
+	return op;
+}
+
 @end
 
 @implementation KTXPEnvironmentClose
 
-- (instancetype)init
+- (instancetype) init
 {
 	return [self initWithBoundary:[KTXPToken emptyToken] env:@""];
 }
 
-- (instancetype)initWithBoundary:(KTXPToken *)tok env:(KTXPEnvironment)env
+- (instancetype) initWithBoundary:(KTXPToken *)tok env:(KTXPEnvironment)env
 {
 	self = [super init];
 	
@@ -80,13 +88,22 @@
 	return self;
 }
 
-+ (instancetype)createWithBoundary:(KTXPToken *)tok env:(KTXPEnvironment)env
++ (instancetype) createWithBoundary:(KTXPToken *)tok env:(KTXPEnvironment)env
 {
 	return [[KTXPEnvironmentClose alloc] initWithBoundary:tok env:env];
 }
 
 
-- (NSUInteger)hash { return [_tok hash] + [_env hash]; }
+- (NSUInteger) hash { return [_tok hash] + [_env hash]; }
+
+- (nonnull id) copyWithZone:(nullable NSZone *)zone
+{
+	KTXPEnvironmentClose *cl = [[self class] allocWithZone:zone];
+	cl->_tok = [_tok copy];
+	cl->_env = [_env copy];
+	
+	return cl;
+}
 
 @end
 
@@ -101,16 +118,16 @@
 																	env:@""]];
 }
 
-+ (nonnull instancetype)createWithBegin:(nonnull KTXPEnvironmentOpen *)begin 
-							   children:(nonnull NSArray<__kindof KTXPTreeNode *> *)children
-									end:(nonnull KTXPEnvironmentClose *)close
++ (nonnull instancetype) createWithBegin:(nonnull KTXPEnvironmentOpen *)begin
+						 	    children:(nonnull NSArray<__kindof KTXPTreeNode *> *)children
+								 	 end:(nonnull KTXPEnvironmentClose *)close
 {
 	return [[KTXPEnvironmentNode alloc] initWithBegin:begin children:children end:close];
 }
 
-- (nonnull instancetype)initWithBegin:(nonnull KTXPEnvironmentOpen *)begin 
-							 children:(nonnull NSArray<__kindof KTXPTreeNode *> *)children
-								  end:(nonnull KTXPEnvironmentClose *)close
+- (nonnull instancetype) initWithBegin:(nonnull KTXPEnvironmentOpen *)begin
+							  children:(nonnull NSArray<__kindof KTXPTreeNode *> *)children
+								   end:(nonnull KTXPEnvironmentClose *)close
 {
 	self = [super init];
 	
@@ -124,9 +141,7 @@
 	return self;
 }
 
-#pragma mark - NSObject
-
-- (BOOL)isEqual:(id)other
+- (BOOL) isEqual:(id)other
 {
 	if(other == self)
 	{
@@ -142,11 +157,9 @@
 	}
 }
 
-- (NSUInteger)hash { return [_begin hash] + [_end hash] + [_children hash]; }
+- (NSUInteger) hash { return [_begin hash] + [_end hash] + [_children hash]; }
 
-#pragma mark - NSCopying
-
-- (nonnull id)copyWithZone:(nullable NSZone *)zone
+- (nonnull id) copyWithZone:(nullable NSZone *)zone
 {
 	KTXPEnvironmentNode *en = [[self class] allocWithZone:zone];
 	en->_begin = [_begin copy];

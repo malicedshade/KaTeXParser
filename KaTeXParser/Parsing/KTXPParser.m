@@ -306,6 +306,7 @@ typedef NS_ENUM(NSUInteger, KTXPContext) {
 		
 		[_currentFrame push:elem.copy];
 		
+		// FIXME: What happened here? Why are once and finishedGroup not declared?
 		once = YES;
 		finishedGroup = (implied && once) || _lookahead == nil || _currentToken.type == KTXPTokenTypeGroupClose
 			? YES : NO;

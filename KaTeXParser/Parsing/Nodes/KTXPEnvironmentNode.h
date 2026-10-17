@@ -17,10 +17,10 @@ NS_ASSUME_NONNULL_BEGIN
 @property (strong, readonly) KTXPToken *tok;
 @property (strong, readonly) KTXPEnvironment env;
 
-- (instancetype)initWithBoundary:(KTXPToken *)tok
-							 env:(KTXPEnvironment)env NS_DESIGNATED_INITIALIZER;
-+ (instancetype)createWithBoundary:(KTXPToken *)tok
-							   env:(KTXPEnvironment)env;
+- (instancetype) initWithBoundary:(KTXPToken *)tok
+							  env:(KTXPEnvironment)env NS_DESIGNATED_INITIALIZER;
++ (instancetype) createWithBoundary:(KTXPToken *)tok
+							    env:(KTXPEnvironment)env;
 
 @end
 
@@ -28,12 +28,12 @@ NS_ASSUME_NONNULL_BEGIN
 
 @property (strong, nullable) NSArray<NSString *> *args;
 
-- (instancetype)initWithBoundary:(KTXPToken *)tok
-							 env:(KTXPEnvironment)env
-							args:(NSArray<NSString *> *)args NS_DESIGNATED_INITIALIZER;
-+ (instancetype)createWithBoundary:(KTXPToken *)tok
-							   env:(KTXPEnvironment)env
-							  args:(NSArray<NSString *> *)args;
+- (instancetype) initWithBoundary:(KTXPToken *)tok
+							  env:(KTXPEnvironment)env
+							 args:(NSArray<NSString *> *)args NS_DESIGNATED_INITIALIZER;
++ (instancetype) createWithBoundary:(KTXPToken *)tok
+							    env:(KTXPEnvironment)env
+							   args:(NSArray<NSString *> *)args;
 
 @end
 
@@ -43,12 +43,12 @@ NS_ASSUME_NONNULL_BEGIN
 @property (strong) NSArray<__kindof KTXPTreeNode *> *children;
 @property (strong) KTXPEnvironmentClose *end;
 
-- (instancetype)initWithBegin:(KTXPEnvironmentOpen *)begin
-					 children:(NSArray<__kindof KTXPTreeNode *> *)children
-						  end:(KTXPEnvironmentClose *)close NS_DESIGNATED_INITIALIZER;
-+ (instancetype)createWithBegin:(KTXPEnvironmentOpen *)begin
-					   children:(NSArray<__kindof KTXPTreeNode *> *)children
-							end:(KTXPEnvironmentClose *)close;
+- (instancetype) initWithBegin:(KTXPEnvironmentOpen *)begin
+				 	  children:(NSArray<__kindof KTXPTreeNode *> *)children
+					 	   end:(KTXPEnvironmentClose *)close NS_DESIGNATED_INITIALIZER;
++ (instancetype) createWithBegin:(KTXPEnvironmentOpen *)begin
+					    children:(NSArray<__kindof KTXPTreeNode *> *)children
+							 end:(KTXPEnvironmentClose *)close;
 
 @end
 
